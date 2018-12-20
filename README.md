@@ -1,4 +1,4 @@
-homebrew-cask-java7
+homebrew-cask-versions
 ===================
 
 You can install java7 via Homebrew Cask.
