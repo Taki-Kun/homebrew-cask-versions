@@ -1,12 +1,14 @@
 cask 'java7' do
-  version '1.7.0_80'
+  # version '1.7.0_80'
+  version '7u80,b15'
   sha256 '2b9deef240a7f07d08541da01bbd60cbf93bf713efd5997e586ba23ec4f5089e'
 
-  url 'http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-macosx-x64.dmg',
+  # url 'http://download.oracle.com/otn-pub/java/jdk/7u80-b15/jdk-7u80-macosx-x64.dmg',
+  url "https://download.oracle.com/otn-pub/java/jdk/#{version.before_comma}-#{version.after_comma}/jdk-#{version.before_comma}-macosx-x64.dmg",
       cookies: {
                  'oraclelicense' => 'accept-securebackup-cookie',
                }
-  name 'Java Standard Edition Development Kit'
+  name 'Oracle Java 7 Standard Edition Development Kit'
   homepage 'http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html'
 
   pkg 'JDK 7 Update 80.pkg'
@@ -41,7 +43,7 @@ cask 'java7' do
     end
   end
 
-  uninstall pkgutil: 'com.oracle.jdk7u80',
+  uninstall pkgutil: "com.oracle.jdk#{version.before_comma}",
             delete:  [
                        MacOS.version <= :mavericks ? '/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK' : '',
                      ].keep_if { |v| !v.empty? }
@@ -53,7 +55,7 @@ cask 'java7' do
                     ],
             rmdir:  '~/Library/Application Support/Oracle/'
 
-  caveats <<-EOS.undent
+  caveats <<-EOS
     This Cask makes minor modifications to the JRE to prevent any packaged
     application issues.
 
@@ -69,5 +71,5 @@ cask 'java7' do
 
         http://www.oracle.com/technetwork/java/javase/terms/license/index.html
 
-    EOS
+  EOS
 end
