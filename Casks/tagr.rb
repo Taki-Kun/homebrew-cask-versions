@@ -1,6 +1,6 @@
 cask 'tagr' do
-  version '5.1.0.1'
-  sha256 'b0e724bae157b6274cd6a00a8c33caa68d7d9ed38e3f9c8e9f5fd015a8864d3f'
+  version '5.1.0'
+  sha256 '1c8a9bc30c40f9586a81fb01cd53320db4887e8acb862e3ae9a0bc39d7dc3713'
 
   url "https://dl.bintray.com/issenn/homebrew-cask-versions/Tagr_#{version}.dmg"
   name 'Tagr'
