@@ -3,7 +3,7 @@ cask 'squirrel' do
   sha256 '3381f5678c1ea8d5b01eeb1a8767b027b83e40f70896833028638e61f2f385da'
 
   # dl.bintray.com/rime/squirrel was verified as official when first introduced to the cask
-  url "https://dl.bintray.com/rime/squirrel/Squirrel-#{version.before_comma}+git#{version.after_comma}.zip"
+  url "https://dl.bintray.com/issenn/rime/Squirrel-#{version.before_comma}+git#{version.after_comma}.zip"
   appcast 'https://rime.im/release/squirrel/appcast.xml'
   name 'Squirrel'
   homepage 'https://rime.im/'
