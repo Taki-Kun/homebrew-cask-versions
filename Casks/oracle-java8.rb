@@ -1,8 +1,8 @@
 cask 'oracle-java8' do
   version '8u241'
-  sha256 'b41367948cf99ca0b8d1571f116b7e3e322dd1ebdfd4d390e959164d75b97c20'
+  sha256 '57a13fca47039dcd371158c0ed3265f407ba4184fb53e9cb2a95f8ecc49154ab'
 
-  url "http://localhost/jdk-#{version}-macosx-x64.dmg"
+  url "http://localhost:8080/jdk-#{version}-macosx-x64.dmg"
   name 'Oracle Java 8 Standard Edition Development Kit'
   homepage 'https://www.oracle.com/technetwork/java/javase/overview/index.html'
 
