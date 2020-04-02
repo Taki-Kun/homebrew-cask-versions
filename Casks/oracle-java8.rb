@@ -1,8 +1,9 @@
 cask 'oracle-java8' do
-  version '8u241'
+  version '8u241,b07:1f5b5a70bf22433b84d0e960903adac8'
   sha256 '57a13fca47039dcd371158c0ed3265f407ba4184fb53e9cb2a95f8ecc49154ab'
 
-  url "http://localhost:8080/jdk-#{version}-macosx-x64.dmg"
+  # https://github.com/Homebrew/homebrew-cask-versions/issues/7253
+  url "http://localhost:8080/jdk-#{version.before_comma}-macosx-x64.dmg"
   name 'Oracle Java 8 Standard Edition Development Kit'
   homepage 'https://www.oracle.com/technetwork/java/javase/overview/index.html'
 
